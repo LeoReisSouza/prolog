@@ -16,3 +16,4 @@ fat(N,F) :-
   M is N-1,
   fat(M, R),
   F is N*R.
+%fat(3,F)
