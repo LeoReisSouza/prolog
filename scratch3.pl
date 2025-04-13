@@ -51,9 +51,12 @@ filmes_por_decada(D, L) :-
     AnoInicio is D,
     AnoFim is D + 9,
     findall(Filme, (filme(Filme, Ano), Ano >= AnoInicio, Ano =< AnoFim), L).
+?- filmes_por_decada(1990, Filmes).
 
 % PARTE 4: diretores_com_multiplos_filmes(L)
 % Lista diretores que dirigiram mais de um filme
 diretores_com_multiplos_filmes(L) :-
     findall(Diretor, (diretor(F1, Diretor), diretor(F2, Diretor), F1 \= F2), DiretoresRepetidos),
     sort(DiretoresRepetidos, L).
+?- diretores_com_multiplos_filmes(Diretores).
+
